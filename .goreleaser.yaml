@@ -1,0 +1,30 @@
+project_name: ytcap
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -X main.Version={{.Version}}
+
+archives:
+  - format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+
+brews:
+  - name: ytcap
+    homepage: "https://github.com/yetmike/ytcap"
+    description: "Distraction-free YouTube TUI with AI summaries and Q&A"
+    tap:
+      owner: yetmike
+      name: homebrew-tap
+    install: |
+      bin.install "ytcap"

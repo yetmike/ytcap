@@ -1,0 +1,9 @@
+[tools]
+go = "1.24"
+"go:github.com/golangci/golangci-lint/cmd/golangci-lint" = "latest"
+"go:github.com/goreleaser/goreleaser/v2" = "latest"
+node = "22"
+
+[env]
+GOFLAGS = "-mod=mod"
+YTCAP_LOG = "debug"

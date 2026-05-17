@@ -23,12 +23,15 @@ archives:
         formats:
           - zip
 
-homebrew_casks:
+brews:
   - name: ytcap
     directory: Formula
     homepage: "https://github.com/yetmike/ytcap"
     description: "Distraction-free YouTube TUI with AI summaries and Q&A"
+    license: MIT
     repository:
       owner: yetmike
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    install: |
+      bin.install "ytcap"

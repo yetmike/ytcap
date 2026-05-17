@@ -24,8 +24,9 @@ brews:
   - name: ytcap
     homepage: "https://github.com/yetmike/ytcap"
     description: "Distraction-free YouTube TUI with AI summaries and Q&A"
-    tap:
+    repository:
       owner: yetmike
       name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
     install: |
       bin.install "ytcap"

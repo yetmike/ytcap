@@ -15,10 +15,13 @@ builds:
       - -X main.Version={{.Version}}
 
 archives:
-  - format: tar.gz
+  - name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    formats:
+      - tar.gz
     format_overrides:
       - goos: windows
-        format: zip
+        formats:
+          - zip
 
 brews:
   - name: ytcap

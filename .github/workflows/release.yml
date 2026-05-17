@@ -30,4 +30,4 @@ jobs:
           # Needs a PAT with `repo` scope on yetmike/homebrew-tap
           # to publish the Homebrew formula. Remove brews: from
           # .goreleaser.yaml if you don't want this.
-          HOMEBREW_TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+          HOMEBREW_TAP_TOKEN: ${{ secrets.TAP_GITHUB_TOKEN }}
